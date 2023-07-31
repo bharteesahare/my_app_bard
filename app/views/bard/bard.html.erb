@@ -1,0 +1,14 @@
+<h1>Bard</h1>
+
+<p>Enter a query to generate text:</p>
+
+<%= form_tag bard_index_path do %>
+  <input type="text" name="query" />
+  <input type="submit" value="Generate" />
+<% end %>
+
+<% if @response %>
+  <p>
+    <%= @response %>
+  </p>
+<% end %>
